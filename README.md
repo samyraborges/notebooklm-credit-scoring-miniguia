@@ -2,7 +2,7 @@
 
 ## 📌 Sobre o projeto
 
-Este projeto foi desenvolvido como parte do bootcamp da DIO e tem como objetivo explorar o conceito de **Credit Scoring** e compreender como diferentes tipos de dados podem apoiar a avaliação do risco de crédito.
+Este projeto foi desenvolvido como parte do bootcamp Bradesco - GenAI e Dados da DIO e tem como objetivo explorar o conceito de **Credit Scoring** e compreender como diferentes tipos de dados podem apoiar a avaliação do risco de crédito.
 
 O estudo utiliza o **NotebookLM** como ferramenta de aprendizagem ativa, combinando curadoria de fontes, elaboração e refinamento de prompts, análise das respostas e organização do conhecimento em um miniguia de estudo.
 
