@@ -8,6 +8,11 @@ Nesse contexto, o Credit Scoring utiliza dados e modelos de análise para estima
 
 Este miniguia reúne os principais conceitos estudados durante a pesquisa realizada com apoio do NotebookLM, abordando o papel dos dados, o histórico de crédito, os modelos de Credit Scoring, os principais desafios e, de forma complementar, a utilização de Machine Learning e técnicas de explicabilidade.
 
+## Acesso ao NotebookLM
+
+O conteúdo deste miniguia foi desenvolvido a partir da exploração das fontes selecionadas no NotebookLM.
+
+**Notebook temático:** [Acessar o notebook no NotebookLM](https://notebook.google.com/notebook/f8219e5e-2a4e-4049-a6af-d41e960b1fd2)
 ---
 
 ## 1. O que é Credit Scoring?
