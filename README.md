@@ -119,10 +119,7 @@ O material apresenta:
 ```text
 ├── assets/
 │   ├── mapa-mental.png
-│   └── infografico.png
-│
-├── fontes/
-│   └── README.md
+│   └── arquitetura-credit-scoring.pdf
 │
 ├── miniguia_credit_scoring.md
 │
