@@ -89,46 +89,21 @@ O histórico de pagamentos pode fornecer informações relevantes para diferenci
 
 ## 4. Como funciona uma avaliação de risco de crédito?
 
-A avaliação de risco de crédito pode ser entendida como um processo que transforma diferentes informações em uma estimativa utilizada para apoiar uma decisão.
+A avaliação de risco de crédito envolve diferentes etapas, desde a coleta dos dados até o apoio à decisão:
 
-```mermaid
-flowchart TD
-    A[Coleta das informações] --> B[Tratamento e organização dos dados]
-    B --> C[Seleção das informações relevantes]
-    C --> D[Construção ou aplicação do modelo]
-    D --> E[Estimativa do risco]
-    E --> F[Apoio à decisão de crédito]
-    F --> G[Monitoramento dos resultados]
-    G --> B
-```
+| Etapa | O que acontece |
+|---|---|
+| **1. Coleta de dados** | São reunidas informações relevantes sobre o cliente, seu histórico e a operação de crédito. |
+| **2. Tratamento dos dados** | Os dados são organizados, validados e tratados para reduzir inconsistências e valores ausentes. |
+| **3. Seleção das variáveis** | São identificadas as informações mais relevantes para a avaliação do risco. |
+| **4. Aplicação do modelo** | Um modelo de Credit Scoring utiliza os dados selecionados para estimar o risco de inadimplência. |
+| **5. Estimativa do risco** | O modelo gera uma pontuação ou probabilidade associada ao risco de crédito. |
+| **6. Apoio à decisão** | O resultado é utilizado como uma das informações para apoiar decisões relacionadas à concessão de crédito. |
+| **7. Monitoramento** | Os resultados são acompanhados para avaliar o desempenho do modelo e identificar possíveis ajustes. |
 
-### 4.1 Coleta
+De forma simplificada:
 
-São reunidas as informações disponíveis e relevantes para o problema analisado.
-
-### 4.2 Tratamento
-
-Os dados podem precisar de ajustes antes de serem utilizados, como tratamento de valores ausentes, inconsistências e formatos diferentes.
-
-### 4.3 Seleção das informações
-
-Nem toda informação disponível necessariamente deve ser utilizada. É necessário avaliar quais variáveis são relevantes para o objetivo da análise.
-
-### 4.4 Construção ou aplicação do modelo
-
-As informações são utilizadas para desenvolver ou aplicar um modelo capaz de estimar determinado resultado de crédito.
-
-### 4.5 Estimativa do risco
-
-O modelo produz uma estimativa, pontuação ou classificação relacionada ao risco analisado.
-
-### 4.6 Apoio à decisão
-
-O resultado pode ser utilizado como uma das informações para apoiar decisões relacionadas à concessão de crédito.
-
-### 4.7 Monitoramento
-
-O acompanhamento dos resultados é importante porque os dados e os comportamentos observados podem mudar ao longo do tempo.
+**Dados → Tratamento → Variáveis → Modelo → Estimativa de risco → Decisão → Monitoramento**
 
 ---
 
