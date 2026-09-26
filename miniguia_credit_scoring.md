@@ -172,7 +172,7 @@ Predição / Score
 Apoio à decisão de crédito
        ↓
 Monitoramento
-
+```
 ---
 
 ## 11. Glossário
