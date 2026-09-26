@@ -2,7 +2,7 @@
 
 ## Sobre o projeto
 
-Este projeto foi desenvolvido como parte do desafio do bootcamp Bradesco - GenAI & Dados, utilizando o NotebookLM como ferramenta de apoio à pesquisa, organização e consolidação do conhecimento.
+Este projeto foi desenvolvido como parte do desafio do bootcamp Bradesco - GenAI & Dados da DIO, utilizando o NotebookLM como ferramenta de apoio à pesquisa, organização e consolidação do conhecimento.
 
 O tema escolhido foi Credit Scoring, com foco em compreender como os dados são utilizados na avaliação do risco de crédito, quais abordagens podem ser utilizadas na construção de modelos e quais desafios estão relacionados ao uso de dados e Machine Learning nesse contexto.
 
