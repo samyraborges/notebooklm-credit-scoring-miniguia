@@ -172,3 +172,62 @@ Predição / Score
 Apoio à decisão de crédito
        ↓
 Monitoramento
+
+---
+
+## 11. Glossário
+
+**Credit Scoring**  
+Metodologia utilizada para apoiar a avaliação do risco de crédito.
+
+**Risco de crédito**  
+Possibilidade de que uma obrigação financeira não seja cumprida conforme esperado.
+
+**Inadimplência**  
+Situação em que uma obrigação financeira não é paga conforme as condições estabelecidas.
+
+**Machine Learning**  
+Área da inteligência artificial que utiliza métodos capazes de identificar padrões a partir de dados.
+
+**Feature**  
+Variável ou característica utilizada como entrada de um modelo.
+
+**Modelo preditivo**  
+Modelo utilizado para estimar um resultado a partir de determinadas informações.
+
+**SHAP**  
+Técnica utilizada para interpretar a contribuição das variáveis nas previsões de modelos de Machine Learning.
+
+**Cadastro Positivo**  
+Base de informações que considera o histórico de crédito e pagamentos dos consumidores.
+
+**Open Banking**  
+Modelo de compartilhamento de dados e serviços financeiros mediante autorização do cliente.
+
+---
+
+## 12. Prompts reutilizáveis
+
+### Conceitos
+
+> Explique o conceito de Credit Scoring para alguém que está começando a estudar análise de risco de crédito. Utilize exemplos simples.
+
+### Dados
+
+> Quais variáveis podem ser relevantes para um modelo de Credit Scoring? Organize por categoria e explique a possível contribuição de cada uma.
+
+### Modelagem
+
+> Compare regressão logística, Random Forest e XGBoost aplicados ao Credit Scoring, destacando características, vantagens e limitações.
+
+### Análise crítica
+
+> Quais problemas podem surgir quando um modelo de Machine Learning é utilizado para apoiar decisões de crédito? Organize os problemas por categoria.
+
+### Explicabilidade
+
+> Explique como técnicas de explicabilidade, como SHAP, podem ser utilizadas para interpretar modelos de Credit Scoring.
+
+### Aprofundamento
+
+> Com base nas fontes disponíveis, quais são os principais pontos que ainda precisam ser estudados para compreender melhor a aplicação de Machine Learning ao risco de crédito?
