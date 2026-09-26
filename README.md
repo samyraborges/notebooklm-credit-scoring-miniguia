@@ -1,162 +1,120 @@
-# 💳 Credit Scoring: como os dados apoiam a avaliação de risco de crédito
+# Credit Scoring: como os dados apoiam a avaliação de risco de crédito
 
-## 📌 Sobre o projeto
+## Sobre o projeto
 
-Este projeto foi desenvolvido como parte do desafio do bootcamp **Bradesco - GenAI & Dados**, utilizando o **NotebookLM** como ferramenta de apoio à pesquisa, organização e consolidação do conhecimento.
+Este projeto foi desenvolvido como parte do desafio do bootcamp Bradesco - GenAI & Dados, utilizando o NotebookLM como ferramenta de apoio à pesquisa, organização e consolidação do conhecimento.
 
-O tema escolhido foi **Credit Scoring**, com foco em compreender como os dados são utilizados na avaliação do risco de crédito, quais abordagens podem ser utilizadas na construção de modelos e quais desafios estão relacionados ao uso de dados e Machine Learning nesse contexto.
+O tema escolhido foi Credit Scoring, com foco em compreender como os dados são utilizados na avaliação do risco de crédito, quais abordagens podem ser utilizadas na construção de modelos e quais desafios estão relacionados ao uso de dados e Machine Learning nesse contexto.
 
----
+## Contexto e objetivos
 
-## 🎯 Contexto e Objetivos
+A análise de risco de crédito utiliza diferentes informações para apoiar decisões relacionadas à concessão de crédito.
 
-A análise de risco de crédito depende da utilização de dados para apoiar decisões relacionadas à concessão de crédito.
+O objetivo deste estudo é compreender:
 
-O objetivo deste estudo é compreender, de forma introdutória e estruturada:
+- o que é Credit Scoring e qual sua finalidade;
+- qual é o papel dos dados na avaliação do risco de crédito;
+- quais tipos de dados podem ser utilizados;
+- como modelos tradicionais se diferenciam de abordagens de Machine Learning;
+- quais são os principais desafios relacionados à utilização de dados e modelos preditivos;
+- como a explicabilidade pode contribuir para a interpretação dos modelos.
 
-- O que é Credit Scoring e qual sua finalidade;
-- Qual o papel dos dados na avaliação do risco de crédito;
-- Quais tipos de dados podem ser utilizados;
-- Como modelos tradicionais se diferenciam de abordagens de Machine Learning;
-- Quais são os principais desafios relacionados à utilização de dados e modelos preditivos;
-- Como conceitos de explicabilidade podem contribuir para a interpretação dos modelos.
+O resultado esperado é a construção de um miniguia introdutório sobre Credit Scoring, utilizando fontes abertas e o NotebookLM como apoio ao processo de pesquisa e estudo.
 
-### Objetivo principal
-
-Construir um **miniguia de estudo sobre Credit Scoring**, utilizando fontes abertas e o NotebookLM como ferramenta de apoio à investigação e organização das informações.
-
----
-
-## 📚 Curadoria das Fontes
+## Curadoria das fontes
 
 Foram selecionadas cinco fontes abertas para compor o caderno temático no NotebookLM.
 
-A seleção buscou combinar materiais institucionais, acadêmicos e pesquisas relacionadas a Credit Scoring, Machine Learning, risco de crédito e explicabilidade.
+A seleção buscou reunir materiais institucionais e acadêmicos relacionados a Credit Scoring, risco de crédito, Machine Learning e explicabilidade.
 
-| # | Fonte | Tema principal |
-|---|---|---|
-| 01 | Banco Central do Brasil — *Análise dos efeitos do Cadastro Positivo* | Dados de crédito e Cadastro Positivo |
-| 02 | Revista Ciências Administrativas — *Aplicação de modelos credit scoring na análise da inadimplência de uma instituição de microcrédito* | Modelos de Credit Scoring |
-| 03 | MDPI — *Machine Learning for Enhanced Credit Risk Assessment: An Empirical Approach* | Machine Learning e risco de crédito |
-| 04 | MDPI — *Machine Learning for Credit Risk Prediction: A Systematic Literature Review* | Revisão sobre Machine Learning aplicado ao risco de crédito |
-| 05 | MDPI — *Explaining Deep Learning Models for Credit Scoring with SHAP: A Case Study Using Open Banking Data* | Explicabilidade e SHAP |
+| Fonte | Tema principal |
+|---|---|
+| Banco Central do Brasil — Análise dos efeitos do Cadastro Positivo | Dados de crédito e Cadastro Positivo |
+| Aplicação de modelos credit scoring na análise da inadimplência de uma instituição de microcrédito | Modelos de Credit Scoring |
+| Machine Learning for Enhanced Credit Risk Assessment: An Empirical Approach | Machine Learning e risco de crédito |
+| Machine Learning for Credit Risk Prediction: A Systematic Literature Review | Machine Learning aplicado ao risco de crédito |
+| Explaining Deep Learning Models for Credit Scoring with SHAP: A Case Study Using Open Banking Data | Explicabilidade e SHAP |
 
-### 🔗 Acesso às fontes
+### Fontes consultadas
 
-- [Banco Central do Brasil — Análise dos efeitos do Cadastro Positivo](https://www.bcb.gov.br/content/publicacoes/Documents/outras_pub_alfa/analise_dos_efeitos_do_cadastro_positivo.pdf)
-- [Aplicação de modelos credit scoring na análise da inadimplência](https://ojs.unifor.br/rca/article/view/264)
-- [Machine Learning for Enhanced Credit Risk Assessment](https://www.mdpi.com/1911-8074/16/12/496)
-- [Machine Learning for Credit Risk Prediction: A Systematic Literature Review](https://www.mdpi.com/2306-5729/8/11/169)
-- [Explaining Deep Learning Models for Credit Scoring with SHAP](https://www.mdpi.com/1911-8074/16/4/221)
+- Banco Central do Brasil — [Análise dos efeitos do Cadastro Positivo](https://www.bcb.gov.br/content/publicacoes/Documents/outras_pub_alfa/analise_dos_efeitos_do_cadastro_positivo.pdf)
+- Revista Ciências Administrativas — [Aplicação de modelos credit scoring na análise da inadimplência](https://ojs.unifor.br/rca/article/view/264)
+- MDPI — [Machine Learning for Enhanced Credit Risk Assessment](https://www.mdpi.com/1911-8074/16/12/496)
+- MDPI — [Machine Learning for Credit Risk Prediction: A Systematic Literature Review](https://www.mdpi.com/2306-5729/8/11/169)
+- MDPI — [Explaining Deep Learning Models for Credit Scoring with SHAP](https://www.mdpi.com/1911-8074/16/4/221)
 
----
+## Utilização do NotebookLM
 
-## 🤖 Utilização do NotebookLM
+O NotebookLM foi utilizado ao longo do projeto para explorar as fontes selecionadas, formular perguntas sobre o tema, comparar abordagens e organizar os principais conceitos identificados durante a pesquisa.
 
-O NotebookLM foi utilizado para:
+O processo também envolveu a revisão dos prompts a partir das respostas obtidas, buscando tornar as perguntas mais específicas e direcionadas.
 
-- Explorar as fontes selecionadas;
-- Formular perguntas estratégicas sobre o tema;
-- Comparar diferentes abordagens de Credit Scoring;
-- Identificar conceitos relevantes;
-- Refinar perguntas a partir das respostas obtidas;
-- Organizar os principais aprendizados para a construção do miniguia.
-
-A proposta não foi apenas obter respostas, mas utilizar o processo de perguntas e refinamentos para desenvolver uma compreensão estruturada do tema.
-
----
-
-## 🧠 Engenharia de Prompts e "Cicatrizes"
-
-Durante a exploração do tema, os prompts foram sendo refinados de acordo com a profundidade e objetividade das respostas obtidas.
+## Engenharia de prompts e cicatrizes
 
 ### 1. Exploração inicial
 
-**Prompt:**
+**Prompt**
 
 > O que é Credit Scoring, qual é sua finalidade e qual é o papel dos dados na avaliação do risco de crédito?
 
-**Objetivo:** obter uma visão geral do tema e identificar os principais conceitos que deveriam ser aprofundados.
+**Objetivo:** obter uma visão geral do tema e identificar os principais conceitos que precisariam ser aprofundados.
 
-**Aprendizado:** a pergunta ampla permitiu mapear o assunto, mas gerou uma resposta extensa. Isso indicou a necessidade de formular perguntas mais específicas.
-
----
+**Cicatriz:** a pergunta inicial era ampla e gerou uma resposta extensa. A partir disso, os próximos prompts foram formulados de maneira mais específica.
 
 ### 2. Aprofundamento sobre os dados
 
-**Prompt:**
+**Prompt**
 
 > Quais são os principais tipos de dados utilizados na avaliação de risco de crédito e qual é a contribuição de cada um para o Credit Scoring? Apresente de forma objetiva, destacando apenas os aspectos mais relevantes.
 
-**Objetivo:** entender quais informações podem ser utilizadas nos modelos e qual o papel de cada categoria.
+**Objetivo:** entender quais informações podem ser utilizadas nos modelos e qual é a contribuição de cada categoria.
 
-**Refinamento:** a pergunta passou a delimitar melhor o escopo e a exigir uma resposta mais objetiva.
-
----
+**Cicatriz:** a delimitação do escopo e a solicitação de objetividade ajudaram a obter uma resposta mais direcionada.
 
 ### 3. Comparação entre abordagens
 
-**Prompt:**
+**Prompt**
 
 > Como os modelos tradicionais de Credit Scoring se diferenciam dos modelos que utilizam Machine Learning? Explique de forma objetiva as principais diferenças, vantagens e limitações de cada abordagem.
 
-**Objetivo:** comparar métodos tradicionais e abordagens baseadas em Machine Learning.
+**Objetivo:** comparar as principais características das abordagens tradicionais e dos modelos baseados em Machine Learning.
 
-**Aprendizado:** a comparação ajudou a organizar o tema a partir de critérios como interpretabilidade, complexidade e capacidade de identificar padrões.
+**Cicatriz:** a comparação permitiu organizar o estudo a partir de aspectos como interpretabilidade, complexidade e capacidade de identificar padrões.
 
----
+### 4. Análise dos desafios
 
-### 4. Análise crítica
-
-**Prompt:**
+**Prompt**
 
 > Quais são os principais desafios de utilizar dados e modelos de Machine Learning para tomar decisões de crédito?
 
-**Objetivo:** identificar limitações e pontos de atenção relacionados à aplicação prática dos modelos.
+**Objetivo:** identificar os principais pontos de atenção relacionados à utilização de dados e modelos preditivos no contexto de crédito.
 
-**Aprendizado:** além da capacidade preditiva, a análise evidenciou a importância de temas como qualidade dos dados, explicabilidade, privacidade e tratamento adequado das informações.
+**Cicatriz:** essa etapa ampliou a análise para além da capacidade preditiva dos modelos, considerando também aspectos relacionados à qualidade dos dados, explicabilidade e utilização das informações.
 
----
+## Miniguia de estudo
 
-## 📖 Miniguia de Estudo
+O conteúdo consolidado durante a pesquisa foi organizado em um miniguia com os principais conceitos estudados.
 
-O conteúdo consolidado a partir da pesquisa e das interações com o NotebookLM foi organizado no seguinte material:
+[ Acessar o Miniguia de Credit Scoring ](miniguia_credit_scoring.md)
 
-👉 **[Acessar o Miniguia de Credit Scoring](miniguia_credit_scoring.md)**
+O material apresenta:
 
-O miniguia apresenta:
+- conceitos fundamentais de Credit Scoring;
+- papel dos dados na avaliação de crédito;
+- principais categorias de dados;
+- modelos tradicionais e Machine Learning;
+- principais desafios;
+- conceitos relacionados à explicabilidade;
+- glossário;
+- prompts para aprofundamento do tema.
 
-- Conceitos fundamentais de Credit Scoring;
-- Papel dos dados na avaliação de crédito;
-- Principais categorias de dados;
-- Modelos tradicionais x Machine Learning;
-- Principais desafios;
-- Conceitos de explicabilidade;
-- Glossário;
-- Prompts reutilizáveis para aprofundamento.
+## Ferramentas utilizadas
 
----
+- NotebookLM
+- GitHub
+- Markdown
 
-## 🧩 Principais aprendizados
-
-Ao longo da construção do projeto, foi possível compreender que a utilização de dados no crédito não se limita à criação de um modelo preditivo.
-
-A qualidade dos dados, a escolha das variáveis, a metodologia utilizada, a capacidade de interpretar os resultados e os cuidados relacionados ao uso das informações são aspectos importantes para a aplicação dos modelos.
-
-O processo de construção do conhecimento também mostrou a importância de transformar perguntas amplas em perguntas mais específicas para obter análises mais úteis.
-
----
-
-## 🛠️ Ferramentas
-
-- **NotebookLM**
-- **GitHub**
-- **Markdown**
-- Fontes acadêmicas e institucionais abertas
-
----
-
-## 📂 Estrutura do projeto
+## Estrutura do projeto
 
 ```text
 ├── assets/
