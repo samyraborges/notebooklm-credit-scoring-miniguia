@@ -89,9 +89,18 @@ O histórico de pagamentos pode fornecer informações relevantes para diferenci
 
 ## 4. Como funciona uma avaliação de risco de crédito?
 
-De forma simplificada, uma análise de risco de crédito pode envolver diferentes etapas:
+A avaliação de risco de crédito pode ser entendida como um processo que transforma diferentes informações em uma estimativa utilizada para apoiar uma decisão.
 
-**Coleta das informações → Tratamento e organização dos dados → Análise das características relevantes → Aplicação do modelo → Estimativa do risco → Apoio à decisão → Acompanhamento dos resultados**
+```mermaid
+flowchart TD
+    A[Coleta das informações] --> B[Tratamento e organização dos dados]
+    B --> C[Seleção das informações relevantes]
+    C --> D[Construção ou aplicação do modelo]
+    D --> E[Estimativa do risco]
+    E --> F[Apoio à decisão de crédito]
+    F --> G[Monitoramento dos resultados]
+    G --> B
+```
 
 ### 4.1 Coleta
 
@@ -103,19 +112,19 @@ Os dados podem precisar de ajustes antes de serem utilizados, como tratamento de
 
 ### 4.3 Seleção das informações
 
-Nem toda informação disponível necessariamente deve ser utilizada. É necessário avaliar quais variáveis são relevantes para o objetivo do modelo.
+Nem toda informação disponível necessariamente deve ser utilizada. É necessário avaliar quais variáveis são relevantes para o objetivo da análise.
 
-### 4.4 Modelagem
+### 4.4 Construção ou aplicação do modelo
 
-Os dados são utilizados para desenvolver um modelo capaz de estimar determinado resultado de crédito.
+As informações são utilizadas para desenvolver ou aplicar um modelo capaz de estimar determinado resultado de crédito.
 
-### 4.5 Avaliação
+### 4.5 Estimativa do risco
 
-O modelo precisa ser avaliado para verificar seu desempenho e suas limitações.
+O modelo produz uma estimativa, pontuação ou classificação relacionada ao risco analisado.
 
-### 4.6 Aplicação
+### 4.6 Apoio à decisão
 
-Depois de desenvolvido e validado, o modelo pode ser utilizado para apoiar processos de decisão.
+O resultado pode ser utilizado como uma das informações para apoiar decisões relacionadas à concessão de crédito.
 
 ### 4.7 Monitoramento
 
