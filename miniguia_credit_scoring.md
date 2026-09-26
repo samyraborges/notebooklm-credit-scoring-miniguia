@@ -12,7 +12,8 @@ Este miniguia reúne os principais conceitos estudados durante a pesquisa realiz
 
 O conteúdo deste miniguia foi desenvolvido a partir da exploração das fontes selecionadas no NotebookLM.
 
-Notebook temático: [Acessar o notebook no NotebookLM](https://notebook.google.com/notebook/f8219e5e-2a4e-4049-a6af-d41e960b1fd2)
+**Notebook temático:** [Acessar o notebook no NotebookLM](https://notebook.google.com/notebook/f8219e5e-2a4e-4049-a6af-d41e960b1fd2)
+
 ---
 
 ## 1. O que é Credit Scoring?
