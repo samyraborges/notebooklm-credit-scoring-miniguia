@@ -276,43 +276,43 @@ Um bom processo de análise precisa considerar tanto os resultados produzidos qu
 
 Os prompts abaixo podem ser utilizados para continuar estudando o tema no NotebookLM ou em outras ferramentas que permitam trabalhar com fontes fornecidas pelo usuário.
 
-### 12.1 Conceitos fundamentais
+### Conceitos fundamentais
 
 > Explique o que é Credit Scoring, qual é sua finalidade e como ele é utilizado na avaliação de risco de crédito.
 
-### 12.2 Dados
+### Dados
 
 > Quais são os principais tipos de dados utilizados na avaliação de risco de crédito? Organize por categoria e explique a contribuição de cada um.
 
-### 12.3 Histórico de crédito
+### Histórico de crédito
 
 > Explique como o histórico de pagamentos e o Cadastro Positivo podem contribuir para a avaliação de risco de crédito.
 
-### 12.4 Processo de avaliação
+### Processo de avaliação
 
 > Quais são as principais etapas envolvidas na construção e utilização de um modelo de Credit Scoring? Explique cada etapa de forma objetiva.
 
-### 12.5 Modelos
+### Modelos
 
 > Quais são as principais abordagens utilizadas na construção de modelos de Credit Scoring? Explique de forma objetiva as características de cada uma.
 
-### 12.6 Comparação
+### Comparação
 
 > Compare modelos tradicionais de Credit Scoring com modelos baseados em Machine Learning, destacando as principais diferenças, características e limitações de cada abordagem.
 
-### 12.7 Análise crítica
+### Análise crítica
 
 > Quais são os principais desafios relacionados à utilização de dados na avaliação de risco de crédito? Organize os desafios por categoria.
 
-### 12.8 Qualidade dos dados
+### Qualidade dos dados
 
 > Quais problemas de qualidade dos dados podem prejudicar um modelo de Credit Scoring? Apresente exemplos e possíveis formas de tratamento.
 
-### 12.9 Explicabilidade
+### Explicabilidade
 
 > Por que a explicabilidade é importante em modelos utilizados para avaliação de crédito? Apresente exemplos de técnicas que podem ser utilizadas.
 
-### 12.10 Aprofundamento
+### Aprofundamento
 
 > Com base nas fontes disponíveis, quais pontos ainda precisam ser estudados para compreender melhor a utilização de dados na avaliação de risco de crédito?
 
