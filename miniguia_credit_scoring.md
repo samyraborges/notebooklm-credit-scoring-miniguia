@@ -1,233 +1,372 @@
 # Miniguia de Credit Scoring
 
-## 1. Introdução
+## Introdução
 
-O Credit Scoring é uma abordagem utilizada para apoiar a avaliação do risco de crédito a partir da análise de diferentes informações sobre um indivíduo ou empresa.
+A concessão de crédito envolve a necessidade de avaliar o risco associado a cada cliente e operação. Para apoiar esse processo, instituições financeiras utilizam diferentes informações sobre o cliente, seu histórico de crédito e as características da operação.
 
-Por meio de modelos estatísticos e, mais recentemente, técnicas de Machine Learning, os dados podem ser utilizados para identificar padrões associados ao comportamento de crédito e auxiliar na tomada de decisões.
+Nesse contexto, o Credit Scoring utiliza dados e modelos de análise para estimar o risco de crédito e apoiar decisões relacionadas à concessão de crédito.
 
-Este miniguia apresenta os principais conceitos estudados durante a pesquisa, desde o papel dos dados até as diferenças entre modelos tradicionais e abordagens de Machine Learning.
+Este miniguia reúne os principais conceitos estudados durante a pesquisa realizada com apoio do NotebookLM, abordando o papel dos dados, o histórico de crédito, os modelos de Credit Scoring, os principais desafios e, de forma complementar, a utilização de Machine Learning e técnicas de explicabilidade.
 
 ---
 
-## 2. O que é Credit Scoring?
+## 1. O que é Credit Scoring?
 
-Credit Scoring é uma metodologia utilizada para estimar o risco associado à concessão de crédito.
+Credit Scoring é uma metodologia utilizada para apoiar a avaliação do risco de crédito por meio da análise de diferentes informações sobre um cliente ou uma operação.
 
-A partir de informações disponíveis sobre o cliente e seu histórico, um modelo pode produzir uma pontuação ou estimativa relacionada à probabilidade de determinado comportamento de crédito.
+A partir das características observadas nos dados, um modelo pode estimar a probabilidade de determinado comportamento de crédito e gerar uma pontuação ou classificação de risco.
 
 De forma simplificada:
 
-**Dados → Modelo → Score/Estimativa de risco → Apoio à decisão**
+**Dados → Tratamento e análise → Modelo de Credit Scoring → Score ou estimativa de risco → Apoio à decisão de crédito**
 
-O objetivo não é substituir completamente a análise de crédito, mas fornecer uma forma estruturada e quantitativa de apoiar esse processo.
+O Credit Scoring permite estruturar a análise de crédito de maneira quantitativa, utilizando padrões identificados nos dados para apoiar o processo de decisão.
+
+É importante destacar que o score é uma ferramenta de apoio. A decisão de crédito pode envolver outros critérios, políticas e informações além do resultado de um modelo.
 
 ---
 
-## 3. Qual é o papel dos dados?
+## 2. Qual é o papel dos dados?
 
 Os dados são a base para a construção e utilização de modelos de Credit Scoring.
 
-A qualidade, a disponibilidade e a relevância das informações utilizadas influenciam diretamente a capacidade do modelo de identificar padrões relacionados ao risco de crédito.
+Informações relacionadas ao histórico de crédito, características do cliente e características da operação podem fornecer evidências utilizadas na avaliação do risco.
 
-Entre os dados que podem ser utilizados estão:
+Algumas categorias de dados que podem ser consideradas são:
 
 | Categoria | Exemplos |
 |---|---|
-| Histórico de crédito | pagamentos, atrasos, operações de crédito |
+| Histórico de crédito | pagamentos, atrasos e operações anteriores |
 | Dados cadastrais | informações demográficas e socioeconômicas |
 | Dados da operação | valor, prazo e características do crédito solicitado |
-| Dados de relacionamento | histórico de relacionamento com instituições financeiras |
+| Relacionamento financeiro | histórico de relacionamento com instituições financeiras |
 | Dados transacionais | movimentações e comportamento financeiro |
-| Dados alternativos | informações digitais e outras fontes disponíveis |
+| Dados alternativos | outras informações disponíveis para análise de crédito |
 
-A utilização de diferentes fontes de dados pode ampliar a quantidade de informações disponíveis para a análise, mas também exige atenção à qualidade, privacidade e adequação das informações utilizadas.
+A utilização dessas informações depende do contexto da instituição, da disponibilidade dos dados e das regras aplicáveis ao seu uso.
 
----
+Além da quantidade de informações disponíveis, a qualidade dos dados é fundamental. Informações incompletas, inconsistentes ou incorretas podem comprometer as análises realizadas.
 
-## 4. Cadastro Positivo
+### Um ponto importante
 
-O Cadastro Positivo representa uma importante fonte de informações para a análise de crédito.
+Um modelo não é melhor simplesmente por utilizar uma quantidade maior de variáveis.
 
-Enquanto uma análise baseada apenas em registros negativos pode concentrar-se em eventos de inadimplência, o histórico positivo permite considerar também informações relacionadas ao comportamento de pagamento.
-
-Dessa forma, o histórico de crédito pode contribuir para uma avaliação mais baseada no comportamento observado do consumidor.
-
-**Ponto principal:** dados de histórico de pagamento podem fornecer informações relevantes para a avaliação do risco de crédito.
-
-**Fonte principal:** Banco Central do Brasil — *Análise dos efeitos do Cadastro Positivo*.
+É necessário avaliar se as informações utilizadas são relevantes para o problema, possuem qualidade adequada e podem ser utilizadas de forma apropriada.
 
 ---
 
-## 5. Modelos tradicionais de Credit Scoring
+## 3. Histórico de crédito e Cadastro Positivo
 
-Os modelos tradicionais de Credit Scoring utilizam métodos estatísticos para relacionar características dos clientes e das operações com determinado resultado de crédito.
+O histórico de crédito é uma importante fonte de informação para a avaliação do risco.
 
-Um exemplo conhecido é a **regressão logística**, utilizada em problemas de classificação.
+Registros relacionados ao comportamento de pagamento podem ajudar a identificar padrões associados ao cumprimento das obrigações financeiras.
 
-De forma simplificada, o modelo busca identificar como determinadas variáveis estão relacionadas à probabilidade de ocorrência de um evento, como inadimplência.
+Nesse contexto, o Cadastro Positivo permite considerar informações relacionadas ao histórico de pagamentos e não apenas registros de inadimplência.
 
-### Características
+Isso amplia o conjunto de informações que pode ser utilizado na avaliação do comportamento de crédito.
 
-- metodologia estatística consolidada;
-- maior facilidade de interpretação;
-- estrutura relativamente mais simples;
-- possibilidade de identificar a contribuição das variáveis para o resultado.
+### Exemplo
 
-Essas características fazem com que modelos tradicionais continuem relevantes em aplicações de risco de crédito.
+Considere dois clientes que estão solicitando uma operação de crédito.
+
+Além das informações cadastrais e da operação solicitada, pode ser relevante observar informações relacionadas ao histórico de pagamentos de cada um.
+
+O comportamento observado ao longo do tempo pode fornecer informações adicionais para a avaliação do risco.
+
+### Ponto principal
+
+O histórico de pagamentos pode fornecer informações relevantes para diferenciar diferentes perfis de comportamento de crédito.
+
+**Fonte relacionada:** Banco Central do Brasil — *Análise dos efeitos do Cadastro Positivo*.
 
 ---
 
-## 6. Credit Scoring com Machine Learning
+## 4. Como funciona uma avaliação de risco de crédito?
 
-Técnicas de Machine Learning podem ser utilizadas para desenvolver modelos capazes de identificar relações mais complexas entre as variáveis.
+De forma simplificada, uma análise de risco de crédito pode envolver diferentes etapas:
 
-Entre os algoritmos encontrados na literatura estão:
+**Coleta das informações → Tratamento e organização dos dados → Análise das características relevantes → Aplicação do modelo → Estimativa do risco → Apoio à decisão → Acompanhamento dos resultados**
+
+### 4.1 Coleta
+
+São reunidas as informações disponíveis e relevantes para o problema analisado.
+
+### 4.2 Tratamento
+
+Os dados podem precisar de ajustes antes de serem utilizados, como tratamento de valores ausentes, inconsistências e formatos diferentes.
+
+### 4.3 Seleção das informações
+
+Nem toda informação disponível necessariamente deve ser utilizada. É necessário avaliar quais variáveis são relevantes para o objetivo do modelo.
+
+### 4.4 Modelagem
+
+Os dados são utilizados para desenvolver um modelo capaz de estimar determinado resultado de crédito.
+
+### 4.5 Avaliação
+
+O modelo precisa ser avaliado para verificar seu desempenho e suas limitações.
+
+### 4.6 Aplicação
+
+Depois de desenvolvido e validado, o modelo pode ser utilizado para apoiar processos de decisão.
+
+### 4.7 Monitoramento
+
+O acompanhamento dos resultados é importante porque os dados e os comportamentos observados podem mudar ao longo do tempo.
+
+---
+
+## 5. Modelos de Credit Scoring
+
+Diferentes métodos podem ser utilizados para construir modelos de Credit Scoring.
+
+Entre as abordagens tradicionais, a regressão logística é um exemplo de método estatístico utilizado em problemas de classificação.
+
+Esses modelos relacionam características observadas nos dados com um resultado de interesse, como a ocorrência ou não de inadimplência.
+
+A escolha do método depende das características do problema, dos dados disponíveis e dos objetivos da análise.
+
+### Características de modelos tradicionais
+
+- utilização de métodos estatísticos consolidados;
+- estrutura relativamente simples;
+- maior facilidade de interpretação em determinadas abordagens;
+- possibilidade de analisar a relação entre variáveis e resultados.
+
+A regressão logística, por exemplo, pode ser utilizada para estimar a probabilidade de ocorrência de determinado evento a partir de um conjunto de variáveis.
+
+## 6. Machine Learning aplicado ao Credit Scoring
+
+Além dos métodos estatísticos tradicionais, técnicas de Machine Learning também podem ser utilizadas na construção de modelos de risco de crédito.
+
+Essas técnicas podem identificar padrões e relações mais complexas presentes nos dados.
+
+Alguns exemplos de algoritmos utilizados em problemas de classificação são:
 
 - Random Forest;
 - Gradient Boosting;
 - XGBoost;
-- redes neurais;
-- outros métodos de classificação.
+- redes neurais.
 
-Uma diferença importante está na capacidade de alguns modelos de Machine Learning de capturar relações não lineares e interações mais complexas entre as variáveis.
+Uma diferença importante é que determinados modelos de Machine Learning conseguem representar relações não lineares e interações mais complexas entre variáveis.
 
-Por outro lado, modelos mais complexos podem apresentar maior dificuldade de interpretação.
+Por outro lado, modelos mais complexos podem aumentar a dificuldade de interpretar os resultados.
+
+Por isso, a avaliação de um modelo de crédito não deve considerar apenas seu desempenho preditivo. Aspectos como interpretação, qualidade dos dados e contexto de aplicação também são relevantes.
 
 ---
 
-## 7. Modelos tradicionais x Machine Learning
+## 7. Modelos tradicionais e Machine Learning
+
+As diferentes abordagens possuem características próprias.
 
 | Aspecto | Modelos tradicionais | Machine Learning |
 |---|---|---|
-| Interpretabilidade | Geralmente maior | Pode ser menor em modelos complexos |
-| Complexidade | Menor | Pode ser maior |
-| Relações entre variáveis | Mais estruturadas | Pode capturar relações complexas |
-| Transparência | Geralmente mais simples de explicar | Pode exigir técnicas adicionais |
-| Exemplos | Regressão logística | Random Forest, XGBoost, redes neurais |
+| Estrutura | Geralmente mais simples | Pode apresentar maior complexidade |
+| Interpretabilidade | Geralmente mais fácil de interpretar | Pode exigir técnicas adicionais |
+| Relações entre variáveis | Mais estruturadas | Pode capturar relações mais complexas |
+| Exemplos | Regressão logística | Random Forest, XGBoost e redes neurais |
+| Complexidade computacional | Geralmente menor | Pode ser maior dependendo do modelo |
+| Aplicação | Pode atender diferentes problemas de crédito | Pode ser útil quando relações complexas precisam ser modeladas |
 
-Não existe uma única abordagem que seja adequada para todos os contextos. A escolha depende das características dos dados, do objetivo do modelo e dos requisitos da aplicação.
+A comparação não significa que uma abordagem seja sempre superior à outra.
+
+A escolha depende do problema, dos dados disponíveis, dos requisitos de interpretação e de outros critérios envolvidos na aplicação.
 
 ---
 
 ## 8. Principais desafios
 
-A utilização de dados e Machine Learning em decisões de crédito envolve desafios que vão além da escolha do algoritmo.
+A utilização de dados para avaliação de risco de crédito envolve desafios que precisam ser considerados durante o desenvolvimento e a aplicação dos modelos.
 
-### Qualidade dos dados
+### 8.1 Qualidade dos dados
 
-Dados incompletos, inconsistentes ou incorretos podem prejudicar o desempenho do modelo.
+Dados ausentes, inconsistentes, duplicados ou incorretos podem afetar a análise e o desempenho dos modelos.
 
-### Desbalanceamento
+A preparação dos dados é, portanto, uma etapa importante do processo.
 
-Em problemas de crédito, determinados eventos podem ocorrer com menor frequência que outros. Isso pode gerar conjuntos de dados desbalanceados e exigir técnicas específicas de tratamento.
+### 8.2 Representatividade
 
-### Explicabilidade
+Os dados utilizados no desenvolvimento precisam representar adequadamente o contexto em que o modelo será aplicado.
 
-Quanto mais complexo o modelo, maior pode ser a dificuldade para compreender por que determinada previsão foi produzida.
+Mudanças no perfil dos clientes ou nas condições do mercado podem afetar o comportamento observado pelo modelo.
 
-### Privacidade
+### 8.3 Desbalanceamento
 
-Informações utilizadas na análise de crédito podem envolver dados pessoais e financeiros, exigindo cuidados relacionados à utilização e proteção dessas informações.
+Em alguns problemas de crédito, determinados eventos podem ocorrer com frequência muito menor que outros.
 
-### Generalização
+Esse desbalanceamento precisa ser considerado durante a construção e a avaliação do modelo.
 
-Um modelo precisa apresentar comportamento adequado não apenas nos dados utilizados durante seu desenvolvimento, mas também quando aplicado a novos casos.
+### 8.4 Privacidade e utilização dos dados
+
+Informações utilizadas em análises de crédito podem envolver dados pessoais e financeiros.
+
+Por isso, sua utilização exige cuidados relacionados à proteção, segurança e tratamento adequado das informações.
+
+### 8.5 Interpretabilidade
+
+A compreensão dos fatores que influenciam uma previsão pode ser importante para analisar e explicar os resultados de um modelo.
+
+Esse desafio pode ser maior quando são utilizados modelos mais complexos.
+
+### 8.6 Acompanhamento
+
+O comportamento dos dados pode mudar ao longo do tempo.
+
+Por isso, modelos utilizados em produção precisam ser acompanhados para verificar se continuam apresentando resultados adequados ao contexto em que estão sendo utilizados.
 
 ---
 
-## 9. Explicabilidade e SHAP
+## 9. Explicabilidade dos modelos
 
-A explicabilidade busca tornar mais compreensível a relação entre as variáveis utilizadas pelo modelo e seus resultados.
+A explicabilidade está relacionada à capacidade de compreender como as informações utilizadas por um modelo contribuem para seus resultados.
 
-Uma das técnicas estudadas nas fontes selecionadas é o **SHAP (SHapley Additive exPlanations)**.
+Esse aspecto ganha importância quando são utilizados modelos mais complexos, nos quais a relação entre as variáveis de entrada e a previsão não é facilmente observada.
 
-O SHAP pode ser utilizado para analisar a contribuição das variáveis para uma determinada previsão.
+Uma das técnicas estudadas nas fontes selecionadas é o SHAP, sigla para *SHapley Additive exPlanations*.
+
+O SHAP pode ser utilizado para analisar a contribuição das variáveis para determinada previsão.
 
 Em um contexto de Credit Scoring, isso pode ajudar a responder perguntas como:
 
 > Quais características contribuíram para determinado resultado do modelo?
 
-Isso é especialmente relevante quando são utilizados modelos mais complexos, nos quais a relação entre entrada e resultado não é facilmente observável.
+A explicabilidade não elimina a necessidade de avaliar o modelo de forma completa, mas pode contribuir para uma análise mais transparente de seus resultados.
 
 **Fonte relacionada:** *Explaining Deep Learning Models for Credit Scoring with SHAP: A Case Study Using Open Banking Data*.
 
----
+## 10. O que diferencia uma boa análise de crédito?
 
-## 10. Fluxo simplificado de um modelo de Credit Scoring
+A utilização de um modelo de Credit Scoring não depende apenas do algoritmo escolhido.
 
-```text
-Coleta dos dados
-       ↓
-Tratamento e preparação
-       ↓
-Seleção/engenharia das variáveis
-       ↓
-Treinamento do modelo
-       ↓
-Avaliação do modelo
-       ↓
-Predição / Score
-       ↓
-Apoio à decisão de crédito
-       ↓
-Monitoramento
-```
+Uma análise estruturada envolve diferentes aspectos:
+
+**Qualidade dos dados + Relevância das variáveis + Modelo adequado ao problema + Avaliação dos resultados + Interpretação + Monitoramento**
+
+Isso significa que um modelo deve ser analisado dentro do contexto em que será utilizado.
+
+Um bom processo de análise precisa considerar tanto os resultados produzidos quanto a qualidade das informações que sustentam esses resultados.
+
 ---
 
 ## 11. Glossário
 
-**Credit Scoring**  
-Metodologia utilizada para apoiar a avaliação do risco de crédito.
-
-**Risco de crédito**  
-Possibilidade de que uma obrigação financeira não seja cumprida conforme esperado.
-
-**Inadimplência**  
-Situação em que uma obrigação financeira não é paga conforme as condições estabelecidas.
-
-**Machine Learning**  
-Área da inteligência artificial que utiliza métodos capazes de identificar padrões a partir de dados.
-
-**Feature**  
-Variável ou característica utilizada como entrada de um modelo.
-
-**Modelo preditivo**  
-Modelo utilizado para estimar um resultado a partir de determinadas informações.
-
-**SHAP**  
-Técnica utilizada para interpretar a contribuição das variáveis nas previsões de modelos de Machine Learning.
-
-**Cadastro Positivo**  
-Base de informações que considera o histórico de crédito e pagamentos dos consumidores.
-
-**Open Banking**  
-Modelo de compartilhamento de dados e serviços financeiros mediante autorização do cliente.
+| Conceito | Definição |
+|---|---|
+| **Credit Scoring** | Metodologia utilizada para apoiar a avaliação do risco de crédito a partir de informações sobre clientes e operações. |
+| **Score de crédito** | Pontuação ou medida utilizada para representar uma estimativa de risco de crédito. |
+| **Risco de crédito** | Possibilidade de uma obrigação financeira não ser cumprida conforme as condições estabelecidas. |
+| **Inadimplência** | Não cumprimento de uma obrigação financeira no prazo ou nas condições acordadas. |
+| **Cadastro Positivo** | Base de informações que considera o histórico de crédito e pagamentos dos consumidores. |
+| **Histórico de crédito** | Conjunto de informações relacionadas ao comportamento de crédito e pagamento de um cliente. |
+| **Variável** | Informação utilizada na análise ou como entrada de um modelo. |
+| **Modelo preditivo** | Modelo utilizado para estimar um resultado a partir de determinadas informações. |
+| **Regressão logística** | Método estatístico utilizado em problemas de classificação e que pode ser aplicado à modelagem de risco de crédito. |
+| **Machine Learning** | Abordagem computacional que permite desenvolver modelos capazes de identificar padrões a partir de dados. |
+| **Feature** | Variável ou característica utilizada como entrada de um modelo de Machine Learning. |
+| **SHAP** | Técnica de explicabilidade utilizada para analisar a contribuição das variáveis nas previsões de um modelo. |
+| **Open Banking** | Modelo que permite o compartilhamento de dados e serviços financeiros mediante autorização do cliente. |
+| **Desbalanceamento** | Situação em que as classes de um conjunto de dados possuem quantidades muito diferentes de observações. |
+| **Explicabilidade** | Capacidade de compreender e interpretar como um modelo chegou a determinado resultado. |
 
 ---
 
 ## 12. Prompts reutilizáveis
 
-### Conceitos
+Os prompts abaixo podem ser utilizados para continuar estudando o tema no NotebookLM ou em outras ferramentas que permitam trabalhar com fontes fornecidas pelo usuário.
 
-> Explique o conceito de Credit Scoring para alguém que está começando a estudar análise de risco de crédito. Utilize exemplos simples.
+### 12.1 Conceitos fundamentais
 
-### Dados
+> Explique o que é Credit Scoring, qual é sua finalidade e como ele é utilizado na avaliação de risco de crédito.
 
-> Quais variáveis podem ser relevantes para um modelo de Credit Scoring? Organize por categoria e explique a possível contribuição de cada uma.
+### 12.2 Dados
 
-### Modelagem
+> Quais são os principais tipos de dados utilizados na avaliação de risco de crédito? Organize por categoria e explique a contribuição de cada um.
 
-> Compare regressão logística, Random Forest e XGBoost aplicados ao Credit Scoring, destacando características, vantagens e limitações.
+### 12.3 Histórico de crédito
 
-### Análise crítica
+> Explique como o histórico de pagamentos e o Cadastro Positivo podem contribuir para a avaliação de risco de crédito.
 
-> Quais problemas podem surgir quando um modelo de Machine Learning é utilizado para apoiar decisões de crédito? Organize os problemas por categoria.
+### 12.4 Processo de avaliação
 
-### Explicabilidade
+> Quais são as principais etapas envolvidas na construção e utilização de um modelo de Credit Scoring? Explique cada etapa de forma objetiva.
 
-> Explique como técnicas de explicabilidade, como SHAP, podem ser utilizadas para interpretar modelos de Credit Scoring.
+### 12.5 Modelos
 
-### Aprofundamento
+> Quais são as principais abordagens utilizadas na construção de modelos de Credit Scoring? Explique de forma objetiva as características de cada uma.
 
-> Com base nas fontes disponíveis, quais são os principais pontos que ainda precisam ser estudados para compreender melhor a aplicação de Machine Learning ao risco de crédito?
+### 12.6 Comparação
+
+> Compare modelos tradicionais de Credit Scoring com modelos baseados em Machine Learning, destacando as principais diferenças, características e limitações de cada abordagem.
+
+### 12.7 Análise crítica
+
+> Quais são os principais desafios relacionados à utilização de dados na avaliação de risco de crédito? Organize os desafios por categoria.
+
+### 12.8 Qualidade dos dados
+
+> Quais problemas de qualidade dos dados podem prejudicar um modelo de Credit Scoring? Apresente exemplos e possíveis formas de tratamento.
+
+### 12.9 Explicabilidade
+
+> Por que a explicabilidade é importante em modelos utilizados para avaliação de crédito? Apresente exemplos de técnicas que podem ser utilizadas.
+
+### 12.10 Aprofundamento
+
+> Com base nas fontes disponíveis, quais pontos ainda precisam ser estudados para compreender melhor a utilização de dados na avaliação de risco de crédito?
+
+---
+
+## 13. Principais aprendizados
+
+A pesquisa permitiu compreender que o Credit Scoring está diretamente relacionado à utilização de dados para apoiar a avaliação do risco de crédito.
+
+Entre os principais aprendizados estão:
+
+- os dados são a base para a construção das análises de risco;
+- o histórico de crédito pode fornecer informações relevantes sobre o comportamento de pagamento;
+- diferentes categorias de dados podem contribuir para a avaliação de uma operação;
+- a qualidade dos dados é tão importante quanto a escolha do modelo;
+- existem diferentes abordagens para construção de modelos de Credit Scoring;
+- modelos tradicionais e técnicas de Machine Learning possuem características e desafios diferentes;
+- modelos mais complexos podem exigir técnicas adicionais de explicabilidade;
+- o acompanhamento dos modelos é importante porque os dados e comportamentos podem mudar ao longo do tempo.
+
+---
+
+## 14. Conclusão
+
+O estudo mostrou que Credit Scoring é uma abordagem baseada em dados utilizada para apoiar a avaliação do risco de crédito.
+
+A construção de uma análise de crédito envolve mais do que escolher um modelo. É necessário compreender os dados disponíveis, avaliar sua qualidade, selecionar informações relevantes, analisar os resultados e acompanhar o comportamento do modelo ao longo do tempo.
+
+Modelos estatísticos tradicionais e técnicas de Machine Learning podem fazer parte desse processo, dependendo das características do problema e dos objetivos da aplicação.
+
+Outro ponto importante é a capacidade de interpretar os resultados. Em modelos mais complexos, técnicas de explicabilidade podem contribuir para compreender a influência das variáveis nas previsões.
+
+Dessa forma, o estudo de Credit Scoring envolve uma combinação entre dados, métodos de análise, conhecimento do contexto de crédito e avaliação crítica dos resultados.
+
+---
+
+## 15. Fontes utilizadas
+
+1. Banco Central do Brasil. *Análise dos efeitos do Cadastro Positivo*.
+
+   https://www.bcb.gov.br/content/publicacoes/Documents/outras_pub_alfa/analise_dos_efeitos_do_cadastro_positivo.pdf
+
+2. Revista Ciências Administrativas. *Aplicação de modelos credit scoring na análise da inadimplência de uma instituição de microcrédito*.
+
+   https://ojs.unifor.br/rca/article/view/264
+
+3. *Machine Learning for Enhanced Credit Risk Assessment: An Empirical Approach*.
+
+   https://www.mdpi.com/1911-8074/16/12/496
+
+4. *Machine Learning for Credit Risk Prediction: A Systematic Literature Review*.
+
+   https://www.mdpi.com/2306-5729/8/11/169
+
+5. *Explaining Deep Learning Models for Credit Scoring with SHAP: A Case Study Using Open Banking Data*.
+
+   https://www.mdpi.com/1911-8074/16/4/221
