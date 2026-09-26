@@ -49,6 +49,9 @@ O NotebookLM foi utilizado ao longo do projeto para explorar as fontes seleciona
 
 O processo também envolveu a revisão dos prompts a partir das respostas obtidas, buscando tornar as perguntas mais específicas e direcionadas.
 
+**Notebook utilizado no projeto:** [Acessar no NotebookLM](https://notebook.google.com/notebook/f8219e5e-2a4e-4049-a6af-d41e960b1fd2)
+
+
 ## Engenharia de prompts e cicatrizes
 
 ### 1. Exploração inicial
